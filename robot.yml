@@ -1,0 +1,15 @@
+name: SFMC Job Bot
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Robot
+        run: python robot.py
